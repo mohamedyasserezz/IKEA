@@ -17,6 +17,7 @@ namespace LinkDev.IKEA.PL
 
             var app = builder.Build();
 
+            #region Configure Services[Kestrel Midlewares]
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
@@ -30,11 +31,12 @@ namespace LinkDev.IKEA.PL
 
             app.UseRouting();
 
-           
+
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}"); 
+            #endregion
 
             app.Run();
         }
