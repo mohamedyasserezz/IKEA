@@ -1,3 +1,5 @@
+using LinkDev.IKEA.DAL.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
 namespace LinkDev.IKEA.PL
 {
     public class Program
@@ -12,6 +14,12 @@ namespace LinkDev.IKEA.PL
 
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<ApplicationDbContext>(
+
+                options =>
+                {
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+                });
 
             #endregion
 

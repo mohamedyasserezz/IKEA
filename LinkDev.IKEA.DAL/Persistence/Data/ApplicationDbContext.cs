@@ -1,4 +1,4 @@
-﻿using LinkDev.IKEA.DAL.Models;
+﻿using LinkDev.IKEA.DAL.Models.Department;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkDev.IKEA.DAL
+namespace LinkDev.IKEA.DAL.Persistence.Data
 {
-    internal class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
