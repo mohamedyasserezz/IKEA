@@ -1,3 +1,4 @@
+using LinkDev.IKEA.BLL.Services.Departments;
 using LinkDev.IKEA.DAL.Persistence.Data;
 using LinkDev.IKEA.DAL.Persistence.Repositories.Departments;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +22,8 @@ namespace LinkDev.IKEA.PL
                 {
                     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
                 });
-            builder.Services.AddScoped<IDepartmentRepository,IDepartmentRepository>();
+            builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
+            builder.Services.AddScoped<IDepartmentService, DepartmentService>();
             #endregion
 
             var app = builder.Build();
