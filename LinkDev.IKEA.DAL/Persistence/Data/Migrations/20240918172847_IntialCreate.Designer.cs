@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LinkDev.IKEA.DAL.Persistence.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240918154817_IntialCreate")]
+    [Migration("20240918172847_IntialCreate")]
     partial class IntialCreate
     {
         /// <inheritdoc />
@@ -49,7 +49,6 @@ namespace LinkDev.IKEA.DAL.Persistence.Data.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")

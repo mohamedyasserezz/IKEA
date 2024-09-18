@@ -19,7 +19,7 @@ namespace LinkDev.IKEA.DAL.Persistence.Data.Migrations
                         .Annotation("SqlServer:Identity", "10, 10"),
                     Name = table.Column<string>(type: "VarChar(50)", nullable: false),
                     Code = table.Column<string>(type: "VarChar(20)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreationDate = table.Column<DateOnly>(type: "date", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
