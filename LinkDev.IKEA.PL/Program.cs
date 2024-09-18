@@ -15,7 +15,6 @@ namespace LinkDev.IKEA.PL
 
 
             builder.Services.AddControllersWithViews();
-
             builder.Services.AddDbContext<ApplicationDbContext>(
 
                 options =>

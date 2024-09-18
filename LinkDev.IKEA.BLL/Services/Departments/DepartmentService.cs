@@ -28,6 +28,7 @@ namespace LinkDev.IKEA.BLL.Services.Departments
                 CreationDate = department.CreationDate,
                 Description = department.Description,
             }).AsNoTracking().ToList();
+            
             return departments;
             /// foreach (var department in departments)
             ///     yield return new DepartmentDto

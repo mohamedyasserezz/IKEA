@@ -11,6 +11,10 @@ namespace LinkDev.IKEA.DAL.Persistence.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        {
+            
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

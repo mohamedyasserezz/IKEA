@@ -10,8 +10,10 @@ namespace LinkDev.IKEA.PL.Controllers
         
         private readonly IDepartmentService _departmentService = departmentService;
 
+        [HttpGet] // Get: Department/Index
         public IActionResult Index()
         {
+            var departments = _departmentService.GetAllDepartments();
             return View();
         }
     }
