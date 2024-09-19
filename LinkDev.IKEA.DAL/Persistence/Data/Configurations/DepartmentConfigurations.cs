@@ -1,4 +1,4 @@
-﻿using LinkDev.IKEA.DAL.Models;
+﻿using LinkDev.IKEA.DAL.Entities.Department;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkDev.IKEA.DAL.Data.Configurations
+namespace LinkDev.IKEA.DAL.Persistence.Data.Configurations
 {
     internal class DepartmentConfigurations : IEntityTypeConfiguration<Department>
     {
